@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const heroBg = document.querySelector(".hero-bg");
+  if (heroBg) {
+    heroBg.style.backgroundImage = 'url("https://draiq-partner.netlify.app/images/hero.webp")';
+  }
+
   const menuButton = document.querySelector(".menu-btn");
   const mobileNav = document.querySelector(".mobile-nav");
 
