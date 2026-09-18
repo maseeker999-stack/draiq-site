@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const patchStylesheet = document.createElement("link");
+  patchStylesheet.rel = "stylesheet";
+  patchStylesheet.href = "css/patch.css";
+  document.head.appendChild(patchStylesheet);
+
   const heroBg = document.querySelector(".hero-bg");
   if (heroBg) {
     heroBg.style.backgroundImage = 'url("https://draiq-partner.netlify.app/images/hero.webp")';
