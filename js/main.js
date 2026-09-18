@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
     heroBg.style.backgroundImage = 'url("https://draiq-partner.netlify.app/images/hero.webp")';
   }
 
+  const beforeAfterHeading = document.querySelector(".change .section-heading h2");
+  if (beforeAfterHeading) {
+    beforeAfterHeading.innerHTML = "積算業務は、<br>こう変わる。";
+  }
+
   const menuButton = document.querySelector(".menu-btn");
   const mobileNav = document.querySelector(".mobile-nav");
 
