@@ -1,0 +1,39 @@
+.workflow.new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.workflow.new .workflow-label {
+  align-self: center;
+}
+
+.workflow.new .steps,
+.workflow.new .steps.steps-single-line.dark-steps {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.workflow.new .steps span,
+.workflow.new .steps i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workflow.new p {
+  width: 100%;
+  text-align: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+  .workflow.new .steps,
+  .workflow.new .steps.steps-single-line.dark-steps {
+    justify-content: flex-start;
+  }
+}
