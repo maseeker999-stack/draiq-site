@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const patchStylesheet = document.createElement("link");
   patchStylesheet.rel = "stylesheet";
-  patchStylesheet.href = "css/patch.css?v=20260918-2";
+  patchStylesheet.href = "css/patch.css?v=20260918-3";
   document.head.appendChild(patchStylesheet);
 
   const heroBg = document.querySelector(".hero-bg");
@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const beforeAfterHeading = document.querySelector(".change .section-heading h2");
   if (beforeAfterHeading) {
-    beforeAfterHeading.innerHTML = "積算業務は、<br>こう変わる。";
+    beforeAfterHeading.innerHTML = '<span>積算業務は、</span><span>こう変わる。</span>';
+    beforeAfterHeading.classList.add("change-title");
   }
 
   const menuButton = document.querySelector(".menu-btn");
