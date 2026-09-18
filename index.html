@@ -116,7 +116,7 @@
           <div class="workflow new">
             <div class="workflow-label">DRAIQ</div>
             <div class="steps steps-single-line dark-steps">
-              <span>図面</span><i>→</i><span class="accent">AI解析・算出支援</span><i>→</i><span>見積作成を効率化</span><i>→</i><span>人が確認・判断</span>
+              <span>図面</span><i>→</i><span class="accent">AI解析・算出支援</span><i>→</i><span>人が確認・判断</span>
             </div>
             <p>AIに任せられる作業を支援し、人は確認と判断に集中する。</p>
           </div>
@@ -234,11 +234,27 @@
         <form class="contact-form reveal delay" name="draiq-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
           <input type="hidden" name="form-name" value="draiq-contact">
           <p class="hidden-field"><label>入力しないでください <input name="bot-field"></label></p>
-          <label>会社名<input type="text" name="会社名" autocomplete="organization" required></label>
-          <label>氏名<input type="text" name="氏名" autocomplete="name" required></label>
-          <label>メールアドレス<input type="email" name="メールアドレス" autocomplete="email" required></label>
-          <label>電話番号<input type="tel" name="電話番号" autocomplete="tel"></label>
-          <label>相談内容<textarea name="相談内容" rows="5" placeholder="現在の積算業務やお困りごとをご記入ください"></textarea></label>
+
+          <label>会社名
+            <input type="text" name="会社名" autocomplete="organization" required>
+          </label>
+
+          <label>氏名
+            <input type="text" name="氏名" autocomplete="name" required>
+          </label>
+
+          <label>メールアドレス
+            <input type="email" name="メールアドレス" autocomplete="email" required>
+          </label>
+
+          <label>電話番号
+            <input type="tel" name="電話番号" autocomplete="tel">
+          </label>
+
+          <label>相談内容
+            <textarea name="相談内容" rows="5" placeholder="現在の積算業務やお困りごとをご記入ください"></textarea>
+          </label>
+
           <button class="btn btn-full" type="submit">DRAIQについて相談する</button>
           <p class="form-note">送信内容を確認のうえ、担当者よりご連絡します。</p>
         </form>
@@ -248,13 +264,20 @@
 
   <footer class="footer">
     <div class="shell footer-inner">
-      <div><div class="brand footer-brand">DRAIQ</div><p>建設業の積算・見積業務をAIで支援。</p></div>
+      <div>
+        <div class="brand footer-brand">DRAIQ</div>
+        <p>建設業の積算・見積業務をAIで支援。</p>
+      </div>
       <div class="footer-links">
-        <a href="#features">できること</a><a href="#flow">導入イメージ</a><a href="#faq">FAQ</a><a href="#contact">お問い合わせ</a>
+        <a href="#features">できること</a>
+        <a href="#flow">導入イメージ</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">お問い合わせ</a>
       </div>
     </div>
     <div class="shell copyright">© DRAIQ</div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
