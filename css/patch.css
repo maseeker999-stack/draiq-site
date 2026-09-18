@@ -12,28 +12,76 @@
 .workflow.new .steps,
 .workflow.new .steps.steps-single-line.dark-steps {
   width: 100%;
+  max-width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: visible;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
 }
 
 .workflow.new .steps span,
 .workflow.new .steps i {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.workflow.new .steps span {
+  padding: 14px 16px;
+  font-size: clamp(1rem, 1.35vw, 1.22rem);
+  white-space: nowrap;
+}
+
+.workflow.new .steps i {
+  font-size: 1.2rem;
+}
+
 .workflow.new p {
   width: 100%;
   text-align: center;
-  margin-top: 24px;
+  margin: 24px 0 0;
+}
+
+.change .section-heading h2 {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .workflow.new .steps,
+  .workflow.new .steps.steps-single-line.dark-steps {
+    gap: 7px;
+  }
+
+  .workflow.new .steps span {
+    padding: 12px 13px;
+    font-size: .96rem;
+  }
 }
 
 @media (max-width: 640px) {
   .workflow.new .steps,
   .workflow.new .steps.steps-single-line.dark-steps {
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    overflow: visible;
+  }
+
+  .workflow.new .steps span {
+    width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
+  .workflow.new .steps i {
+    align-self: center;
+    transform: rotate(90deg);
   }
 }
