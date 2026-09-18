@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const patchStylesheet = document.createElement("link");
   patchStylesheet.rel = "stylesheet";
-  patchStylesheet.href = "css/patch.css";
+  patchStylesheet.href = "css/patch.css?v=20260918-2";
   document.head.appendChild(patchStylesheet);
 
   const heroBg = document.querySelector(".hero-bg");
