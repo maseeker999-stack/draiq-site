@@ -95,20 +95,43 @@
     display: block;
   }
 
+  .problem .wide-heading {
+    width: 100%;
+    max-width: none;
+  }
+
   .workflow-title {
-    margin: 0 0 24px;
-    max-width: 18ch;
-    line-height: 1.08;
-    font-size: clamp(44px, 4.4vw, 74px);
-    letter-spacing: -0.03em;
+    margin: 0 0 18px;
+    max-width: none;
+    display: flex;
+    align-items: baseline;
+    gap: .22em;
+    white-space: nowrap;
+    line-height: 1.04;
+    font-size: clamp(48px, 4vw, 64px);
+    letter-spacing: -0.035em;
+  }
+
+  .workflow-title .desktop-flow-title-part {
+    display: inline-block;
+    flex: 0 0 auto;
   }
 
   .workflow-copy {
-    margin-top: 24px !important;
-    max-width: 38ch !important;
-    font-size: clamp(18px, 1.35vw, 24px) !important;
-    line-height: 1.8;
+    margin-top: 18px !important;
+    max-width: none !important;
+    display: flex;
+    align-items: baseline;
+    gap: 1.15em;
+    white-space: nowrap;
+    font-size: clamp(14px, 1vw, 16px) !important;
+    line-height: 1.5;
     color: rgba(255,255,255,0.9) !important;
+  }
+
+  .workflow-copy .desktop-flow-copy-part {
+    display: inline-block;
+    flex: 0 0 auto;
   }
 
   .workflow.old {
