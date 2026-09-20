@@ -82,6 +82,71 @@
 }
 
 @media (max-width: 640px) {
+  .mobile-line {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-copy-hidden {
+    display: none !important;
+  }
+
+  .hero-lead,
+  .intro .copy > p:not(.eyebrow),
+  .problem .wide-heading > p:not(.eyebrow),
+  .workflow.old > p,
+  .feature-hero .copy > p:not(.eyebrow),
+  .feature-row p,
+  .human .copy > p:not(.eyebrow),
+  .management .benefit p,
+  .contact-copy > p:not(.eyebrow) {
+    line-height: 1.75;
+  }
+
+  .problem .wide-heading h2 {
+    font-size: clamp(2rem, 9.2vw, 2.45rem);
+    line-height: 1.18;
+    letter-spacing: -.035em;
+  }
+
+  .problem-focus h3 {
+    font-size: clamp(1.6rem, 7.2vw, 1.95rem);
+    line-height: 1.35;
+    letter-spacing: -.025em;
+  }
+
+  .problem-focus ul {
+    margin-top: 24px;
+  }
+
+  .problem-focus li {
+    line-height: 1.65;
+  }
+
+  .change .change-title {
+    font-size: clamp(2.2rem, 9.7vw, 2.6rem);
+    line-height: 1.18;
+    letter-spacing: -.035em;
+  }
+
+  .management .section-heading h2 {
+    font-size: clamp(2.15rem, 9.2vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: -.035em;
+  }
+
+  .flow .section-heading h2 {
+    font-size: clamp(2.25rem, 9.8vw, 2.65rem);
+    line-height: 1.2;
+    letter-spacing: -.04em;
+  }
+
+  .contact-copy h2 {
+    font-size: clamp(2.05rem, 8.9vw, 2.45rem);
+    line-height: 1.2;
+    letter-spacing: -.035em;
+  }
+
   .workflow.new .steps,
   .workflow.new .steps.steps-single-line.dark-steps {
     flex-direction: column;
