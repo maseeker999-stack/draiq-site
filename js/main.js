@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const patchStylesheet = document.createElement("link");
   patchStylesheet.rel = "stylesheet";
-  patchStylesheet.href = "css/patch.css?v=20260920-main-2";
+  patchStylesheet.href = "css/patch.css?v=20260920-main-3";
   document.head.appendChild(patchStylesheet);
 
   const heroBg = document.querySelector(".hero-bg");
@@ -13,6 +13,26 @@ document.addEventListener("DOMContentLoaded", function () {
   if (beforeAfterHeading) {
     beforeAfterHeading.innerHTML = '<span>積算業務は、</span><span>こう変わる。</span>';
     beforeAfterHeading.classList.add("change-title");
+  }
+
+  const workflowHeading = document.querySelector(".problem .wide-heading h2");
+  if (workflowHeading) {
+    workflowHeading.innerHTML = '見積作成の遅れが<br>受注機会を奪う。';
+  }
+
+  const workflowParagraph = document.querySelector(".problem .wide-heading > p:not(.eyebrow)");
+  if (workflowParagraph) {
+    workflowParagraph.innerHTML = '積算業務の処理能力が足りず、<br>受注したい案件があっても対応できない。<br>見積作成の負担が、<br>売上を伸ばすうえでの制約になっていませんか。';
+  }
+
+  const problemFocusHeading = document.querySelector(".problem-focus h3");
+  if (problemFocusHeading) {
+    problemFocusHeading.innerHTML = '見積作成に<br>時間がかかる';
+  }
+
+  const contactDescription = document.querySelector(".contact-copy > p:not(.eyebrow)");
+  if (contactDescription) {
+    contactDescription.innerHTML = '現在の積算・見積業務をお聞きしたうえで、<br>DRAIQをどのように活用できるかご案内します。';
   }
 
   const mobileMedia = window.matchMedia("(max-width: 640px)");
@@ -57,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   rememberAndSet(
     document.querySelector(".problem-focus h3"),
-    '<span class="mobile-line">見積作成の負担が、</span><span class="mobile-line">機会損失を生み出す</span>'
+    '<span class="mobile-line">見積作成に</span><span class="mobile-line">時間がかかる</span>'
   );
   const problemFocusDescription = document.querySelector(".problem-focus > p");
   if (problemFocusDescription) {
