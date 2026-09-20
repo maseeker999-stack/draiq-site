@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const patchStylesheet = document.createElement("link");
   patchStylesheet.rel = "stylesheet";
-  patchStylesheet.href = "css/patch.css?v=20260920-all-1";
+  patchStylesheet.href = "css/patch.css?v=20260920-main-2";
   document.head.appendChild(patchStylesheet);
 
   const heroBg = document.querySelector(".hero-bg");
@@ -100,6 +100,10 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   rememberAndSet(
+    document.querySelector(".human-title"),
+    '<span class="mobile-line">人は、</span><span class="mobile-line">人にしかできない</span><span class="mobile-line">仕事へ。</span>'
+  );
+  rememberAndSet(
     humanParagraphs[0],
     '積算に使っていた時間を、<br>現場、営業、判断、顧客対応へ。'
   );
@@ -153,11 +157,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  applyMobileCopy();
+  function restoreDesktopCopy() {
+    mobileChanges.forEach(function (change) {
+      change.element.innerHTML = change.original;
+    });
+  }
+
+  function syncResponsiveCopy() {
+    if (mobileMedia.matches) {
+      applyMobileCopy();
+    } else {
+      restoreDesktopCopy();
+    }
+  }
+
+  syncResponsiveCopy();
   if (typeof mobileMedia.addEventListener === "function") {
-    mobileMedia.addEventListener("change", applyMobileCopy);
+    mobileMedia.addEventListener("change", syncResponsiveCopy);
   } else if (typeof mobileMedia.addListener === "function") {
-    mobileMedia.addListener(applyMobileCopy);
+    mobileMedia.addListener(syncResponsiveCopy);
   }
 
   const menuButton = document.querySelector(".menu-btn");
