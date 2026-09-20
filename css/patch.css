@@ -1,0 +1,169 @@
+.workflow.new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.workflow.new .workflow-label {
+  align-self: center;
+}
+
+.workflow.new .steps,
+.workflow.new .steps.steps-single-line.dark-steps {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: visible;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+}
+
+.workflow.new .steps span,
+.workflow.new .steps i {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workflow.new .steps span {
+  padding: 14px 16px;
+  font-size: clamp(1rem, 1.35vw, 1.22rem);
+  white-space: nowrap;
+}
+
+.workflow.new .steps i {
+  font-size: 1.2rem;
+}
+
+.workflow.new p {
+  width: 100%;
+  text-align: center;
+  margin: 24px 0 0;
+}
+
+.change .section-heading.center {
+  text-align: center;
+}
+
+.change .change-title {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.08;
+}
+
+.change .change-title span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .workflow.new .steps,
+  .workflow.new .steps.steps-single-line.dark-steps {
+    gap: 7px;
+  }
+
+  .workflow.new .steps span {
+    padding: 12px 13px;
+    font-size: .96rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .mobile-line {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-copy-hidden {
+    display: none !important;
+  }
+
+  .hero-lead,
+  .intro .copy > p:not(.eyebrow),
+  .problem .wide-heading > p:not(.eyebrow),
+  .workflow.old > p,
+  .feature-hero .copy > p:not(.eyebrow),
+  .feature-row p,
+  .human .copy > p:not(.eyebrow),
+  .management .benefit p,
+  .contact-copy > p:not(.eyebrow) {
+    line-height: 1.75;
+  }
+
+  .problem .wide-heading h2 {
+    font-size: clamp(2rem, 9.2vw, 2.45rem);
+    line-height: 1.18;
+    letter-spacing: -.035em;
+  }
+
+  .problem-focus h3 {
+    font-size: clamp(1.6rem, 7.2vw, 1.95rem);
+    line-height: 1.35;
+    letter-spacing: -.025em;
+  }
+
+  .problem-focus ul {
+    margin-top: 24px;
+  }
+
+  .problem-focus li {
+    line-height: 1.65;
+  }
+
+  .change .change-title {
+    font-size: clamp(2.2rem, 9.7vw, 2.6rem);
+    line-height: 1.18;
+    letter-spacing: -.035em;
+  }
+
+  .management .section-heading h2 {
+    font-size: clamp(2.15rem, 9.2vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: -.035em;
+  }
+
+  .flow .section-heading h2 {
+    font-size: clamp(2.25rem, 9.8vw, 2.65rem);
+    line-height: 1.2;
+    letter-spacing: -.04em;
+  }
+
+  .contact-copy h2 {
+    font-size: clamp(2.05rem, 8.9vw, 2.45rem);
+    line-height: 1.2;
+    letter-spacing: -.035em;
+  }
+
+  .workflow.new .steps,
+  .workflow.new .steps.steps-single-line.dark-steps {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    overflow: visible;
+  }
+
+  .workflow.new .steps span {
+    width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
+  .workflow.new .steps i {
+    align-self: center;
+    transform: rotate(90deg);
+  }
+}
