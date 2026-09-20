@@ -12,6 +12,70 @@
   <meta name="theme-color" content="#0b1b2d">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1b2d'/%3E%3Cpath d='M15 18h14c12 0 20 7 20 14s-8 14-20 14H15V18zm10 8v12h6c5 0 8-2 8-6s-3-6-8-6h-6z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    @media (min-width: 1025px) {
+      .problem-title {
+        margin: 0 0 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.04em;
+        line-height: 1.05;
+        font-size: clamp(52px, 4.8vw, 80px);
+        letter-spacing: -0.03em;
+      }
+      .problem-title span {
+        display: block;
+      }
+      .workflow-title {
+        margin: 0;
+        max-width: 18ch;
+        line-height: 1.08;
+        font-size: clamp(44px, 4.4vw, 74px);
+        letter-spacing: -0.03em;
+      }
+      .workflow-copy {
+        margin-top: 24px !important;
+        max-width: 38ch !important;
+        font-size: clamp(18px, 1.35vw, 24px) !important;
+        line-height: 1.8;
+        color: rgba(255,255,255,0.9) !important;
+      }
+      .workflow.old {
+        text-align: center;
+      }
+      .workflow.old .workflow-label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 28px;
+        text-align: center;
+      }
+      .human-title {
+        margin: 0 0 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.08em;
+        line-height: 1.08;
+        font-size: clamp(56px, 5.2vw, 92px);
+        letter-spacing: -0.03em;
+      }
+      .human-title span {
+        display: block;
+      }
+      .contact-title {
+        margin: 0 0 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.04em;
+        line-height: 1.06;
+        font-size: clamp(50px, 4.6vw, 78px);
+        letter-spacing: -0.03em;
+      }
+      .contact-title span {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -60,7 +124,7 @@
       <div class="shell split intro-split">
         <div class="copy reveal">
           <p class="eyebrow dark">THE PROBLEM</p>
-          <h2>見積もりに、<br><span class="highlight">何時間</span><br>かけていますか？</h2>
+          <h2 class="problem-title"><span>見積もりに</span><span>まだ時間を</span><span>かけていますか？</span></h2>
           <p>図面を見る。数量を拾う。単価を調べる。数字を入力する。</p>
           <p>積算には、細やかな作業が何度も発生します。<br>DRAIQは、その負担をAIで軽くすることを目指します。</p>
         </div>
@@ -74,8 +138,8 @@
       <div class="shell">
         <div class="section-heading reveal wide-heading">
           <p class="eyebrow">CURRENT WORKFLOW</p>
-          <h2>積算業務が、<br>特定の担当者に偏っていませんか。</h2>
-          <p>案件が重なるほど、見積作成の負担も積み上がる。社長や幹部まで見積業務に入っていませんか。</p>
+          <h2 class="workflow-title">見積作成の遅れが受注機会を奪う。</h2>
+          <p class="workflow-copy">積算業務の処理能力が足りず、受注したい案件があっても対応できない。<br>見積作成の負担が、売上を伸ばすうえでの制約になっていませんか。</p>
         </div>
 
         <div class="problem-layout single-emphasis">
@@ -152,7 +216,7 @@
         </figure>
         <div class="copy reveal delay">
           <p class="eyebrow dark">BACK TO HUMAN WORK</p>
-          <h2>人は、<br>人にしかできない<br>仕事へ。</h2>
+          <h2 class="human-title"><span>積算はAIへ</span><span>判断は人へ</span></h2>
           <p>積算に使っていた時間を、現場、営業、判断、顧客対応へ。</p>
           <p>DRAIQが目指すのは、人を減らすことではなく、<br>人の時間を取り戻すことです。</p>
         </div>
@@ -206,7 +270,7 @@
       <div class="shell contact-grid">
         <div class="contact-copy reveal">
           <p class="eyebrow dark">CONTACT</p>
-          <h2>その積算業務、<br>一度DRAIQに<br>相談してみませんか。</h2>
+          <h2 class="contact-title"><span>その積算業務、</span><span>一度DRAIQに</span><span>相談してみませんか。</span></h2>
           <p>現在の積算・見積業務をお聞きしたうえで、<br>DRAIQをどのように活用できるかご案内します。</p>
           <div class="contact-note">営業資料の請求だけではなく、<br>「自社で使えるか分からない」という段階でもご相談いただけます。</div>
         </div>
