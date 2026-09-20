@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const patchStylesheet = document.createElement("link");
   patchStylesheet.rel = "stylesheet";
-  patchStylesheet.href = "css/patch.css?v=20260920-mobile-1";
+  patchStylesheet.href = "css/patch.css?v=20260920-all-1";
   document.head.appendChild(patchStylesheet);
 
   const heroBg = document.querySelector(".hero-bg");
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function applyMobileCopy() {
     mobileChanges.forEach(function (change) {
-      change.element.innerHTML = mobileMedia.matches ? change.html : change.original;
+      change.element.innerHTML = change.html;
     });
   }
 
