@@ -34,17 +34,21 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   rememberAndSet(
+    document.querySelector(".intro .copy h2"),
+    '<span class="mobile-line">見積もりに</span><span class="mobile-line">まだ時間を</span><span class="mobile-line">かけていますか？</span>'
+  );
+  rememberAndSet(
     introParagraphs[0],
-    '図面を見る。数量を拾う。単価を調べる。<br>数字を入力する。'
+    '図面を見る。数量を拾う。<br>単価を調べる。数字を入力する。'
   );
   rememberAndSet(
     introParagraphs[1],
-    '積算には、細やかな作業が何度も発生します。<br>DRAIQは、その負担をAIで軽くすることを目指します。'
+    '積算には、細やかな作業が何度も発生します。<br>DRAIQは、その負担を<br>AIで軽くすることを目指します。'
   );
 
   rememberAndSet(
     document.querySelector(".problem .wide-heading h2"),
-    '<span class="mobile-line">見積作成の遅れが、</span><span class="mobile-line">受注機会を奪っている。</span>'
+    '<span class="mobile-line">見積作成の遅れが</span><span class="mobile-line">受注機会を奪う。</span>'
   );
   rememberAndSet(
     document.querySelector(".problem .wide-heading > p:not(.eyebrow)"),
@@ -71,6 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
   rememberAndSet(
     document.querySelector(".workflow.old > p"),
     '人が順番に処理するため、<br>案件が増えるほど時間も増えやすい。'
+  );
+  rememberAndSet(
+    document.querySelector(".workflow.new > p"),
+    'AIに任せられる作業を支援し、<br>人は確認と判断に集中する。'
   );
 
   rememberAndSet(
@@ -121,6 +129,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".flow .section-heading h2"),
     '<span class="mobile-line">業務に合わせて</span><span class="mobile-line">DRAIQを活用</span>'
   );
+  rememberAndSet(
+    document.querySelector(".flow-list article:nth-child(3) p"),
+    'DRAIQをどのように活用できるか<br>ご案内します。'
+  );
 
   rememberAndSet(
     document.querySelector(".contact-copy h2"),
@@ -129,6 +141,10 @@ document.addEventListener("DOMContentLoaded", function () {
   rememberAndSet(
     document.querySelector(".contact-copy > p:not(.eyebrow)"),
     '現在の積算・見積業務をお聞きしたうえで、<br>DRAIQをどのように活用できるかご案内します。'
+  );
+  rememberAndSet(
+    document.querySelector(".contact-note"),
+    '自社で活用できるかどうか、<br>検討段階からご相談いただけます。'
   );
 
   function applyMobileCopy() {
