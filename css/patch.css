@@ -69,6 +69,15 @@
   text-align: center;
 }
 
+.mobile-line {
+  display: block;
+  width: 100%;
+}
+
+.mobile-copy-hidden {
+  display: none !important;
+}
+
 @media (max-width: 900px) {
   .workflow.new .steps,
   .workflow.new .steps.steps-single-line.dark-steps {
@@ -82,15 +91,6 @@
 }
 
 @media (max-width: 640px) {
-  .mobile-line {
-    display: block;
-    width: 100%;
-  }
-
-  .mobile-copy-hidden {
-    display: none !important;
-  }
-
   .hero-lead,
   .intro .copy > p:not(.eyebrow),
   .problem .wide-heading > p:not(.eyebrow),
