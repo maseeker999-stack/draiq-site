@@ -75,7 +75,73 @@
 }
 
 .mobile-copy-hidden {
-  display: none !important;
+  display: block !important;
+}
+
+@media (min-width: 1025px) {
+  .problem-title {
+    margin: 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.04em;
+    line-height: 1.05;
+    font-size: clamp(52px, 4.8vw, 80px);
+    letter-spacing: -0.03em;
+  }
+
+  .problem-title span,
+  .human-title span,
+  .contact-title span {
+    display: block;
+  }
+
+  .workflow-title {
+    margin: 0 0 24px;
+    max-width: 18ch;
+    line-height: 1.08;
+    font-size: clamp(44px, 4.4vw, 74px);
+    letter-spacing: -0.03em;
+  }
+
+  .workflow-copy {
+    margin-top: 24px !important;
+    max-width: 38ch !important;
+    font-size: clamp(18px, 1.35vw, 24px) !important;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.9) !important;
+  }
+
+  .workflow.old {
+    text-align: center;
+  }
+
+  .workflow.old .workflow-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 28px;
+    text-align: center;
+  }
+
+  .human-title {
+    margin: 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.08em;
+    line-height: 1.08;
+    font-size: clamp(56px, 5.2vw, 92px);
+    letter-spacing: -0.03em;
+  }
+
+  .contact-title {
+    margin: 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.04em;
+    line-height: 1.06;
+    font-size: clamp(50px, 4.6vw, 78px);
+    letter-spacing: -0.03em;
+  }
 }
 
 @media (max-width: 900px) {
@@ -91,6 +157,10 @@
 }
 
 @media (max-width: 640px) {
+  .mobile-copy-hidden {
+    display: none !important;
+  }
+
   .hero-lead,
   .intro .copy > p:not(.eyebrow),
   .problem .wide-heading > p:not(.eyebrow),
