@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const patchStylesheet = document.createElement("link");
   patchStylesheet.rel = "stylesheet";
-  patchStylesheet.href = "css/patch.css?v=20260920-main-3";
+  patchStylesheet.href = "css/patch.css?v=20260920-main-4";
   document.head.appendChild(patchStylesheet);
 
   const heroBg = document.querySelector(".hero-bg");
@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const workflowHeading = document.querySelector(".problem .wide-heading h2");
   if (workflowHeading) {
-    workflowHeading.innerHTML = '見積作成の遅れが<br>受注機会を奪う。';
+    workflowHeading.innerHTML = '<span class="desktop-flow-title-part">見積作成の遅れが</span><span class="desktop-flow-title-part">受注機会を奪う。</span>';
   }
 
   const workflowParagraph = document.querySelector(".problem .wide-heading > p:not(.eyebrow)");
   if (workflowParagraph) {
-    workflowParagraph.innerHTML = '積算業務の処理能力が足りず、<br>受注したい案件があっても対応できない。<br>見積作成の負担が、<br>売上を伸ばすうえでの制約になっていませんか。';
+    workflowParagraph.innerHTML = '<span class="desktop-flow-copy-part">積算業務の処理能力が足りず、</span><span class="desktop-flow-copy-part">受注したい案件があっても対応できない。</span><span class="desktop-flow-copy-part">見積作成の負担が、</span><span class="desktop-flow-copy-part">売上を伸ばすうえでの制約になっていませんか。</span>';
   }
 
   const problemFocusHeading = document.querySelector(".problem-focus h3");
