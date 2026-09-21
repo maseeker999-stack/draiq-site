@@ -8,6 +8,11 @@ v7Phase2Stylesheet.rel='stylesheet';
 v7Phase2Stylesheet.href='/css/v7-phase2.css?v=20260921-1';
 document.head.appendChild(v7Phase2Stylesheet);
 
+const v7Phase3Stylesheet=document.createElement('link');
+v7Phase3Stylesheet.rel='stylesheet';
+v7Phase3Stylesheet.href='/css/v7-phase3.css?v=20260921-1';
+document.head.appendChild(v7Phase3Stylesheet);
+
 const v7ImageSwaps=[
   ['#risk .image-card img','/images/v7-risk.webp','図面と見積資料を確認する積算担当者'],
   ['#ai .side-image img','/images/v7-ai.webp','BIM画面を見ながらAI導入を検討する建設担当者'],
