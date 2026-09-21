@@ -1,0 +1,199 @@
+/* DRAIQ final visual polish — spacing, hierarchy, card rhythm, mobile finish */
+
+:root{
+  --polish-shadow:0 14px 36px rgba(12,26,48,.055);
+  --polish-shadow-dark:0 18px 44px rgba(0,0,0,.18);
+}
+
+/* Global rhythm */
+.section{padding-top:100px;padding-bottom:100px}
+.section-heading{position:relative}
+.section-heading.center{margin-bottom:50px}
+.section-heading h2{line-height:1.14}
+.section-heading>p:last-child{line-height:1.85}
+.eyebrow{margin-bottom:15px}
+
+/* Hero */
+.hero-copy{max-width:680px}
+.hero-copy .lead{line-height:1.9}
+.hero-note{line-height:1.75}
+.hero-mini-cards{gap:14px}
+.mini-card{min-height:122px;padding:20px 19px;display:flex;flex-direction:column;justify-content:flex-start}
+.mini-card strong{line-height:1.35}
+.mini-card p{line-height:1.7}
+
+/* RISK */
+#risk .card-grid.three{gap:15px}
+#risk .card{display:flex;flex-direction:column;justify-content:center;min-height:178px;padding:26px 28px;box-shadow:var(--polish-shadow)}
+#risk .card h3{margin-top:12px;margin-bottom:8px}
+#risk .card p{line-height:1.8}
+#risk .quote-panel{display:grid;gap:4px;padding:26px 30px}
+#risk .quote-panel strong{line-height:1.55}
+
+/* AI cards */
+#ai .check-list{gap:16px}
+#ai .check-list article{justify-content:center;padding:30px 28px;border-radius:20px;box-shadow:var(--polish-shadow-dark)}
+#ai .check-list h3{margin:12px 0 10px}
+#ai .check-list p{line-height:1.78}
+
+/* Solution */
+#solution .flow{align-items:stretch;gap:18px}
+#solution .flow-card{height:100%;min-height:160px;display:flex;flex-direction:column;justify-content:center;padding:27px 26px;box-shadow:var(--polish-shadow)}
+#solution .flow-card h3{margin:10px 0 8px;line-height:1.4}
+#solution .flow-card p{line-height:1.75}
+#solution .feature-grid{gap:16px}
+#solution .feature{min-height:126px;align-items:flex-start;padding:26px 25px;border-radius:18px}
+#solution .feature h3{line-height:1.45;margin-bottom:6px}
+#solution .feature p{line-height:1.75}
+
+/* Target company section */
+#cases .case-list{gap:12px;margin-top:38px}
+#cases .case-list div{min-height:74px;padding:18px 20px;border:1px solid #e5eaf0;border-radius:14px;background:#fafbfd;box-shadow:0 8px 24px rgba(12,26,48,.035)}
+#cases .case-list span{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#101827;color:#ff7a1a}
+#cases .case-list p{line-height:1.6}
+
+/* Official information */
+.official-note{box-shadow:var(--polish-shadow);border-radius:18px}
+
+/* Impact table */
+.impact-table-wrap{box-shadow:0 18px 48px rgba(12,26,48,.075)}
+.impact-table thead th:not(:first-child),
+.impact-table tbody td{text-align:center}
+.impact-table tbody tr:nth-child(even) th,
+.impact-table tbody tr:nth-child(even) td{background:#fbfcfe}
+.impact-table tbody td:last-child{background:rgba(255,122,26,.045)}
+.impact-table tbody td strong{display:inline-block;line-height:1.35}
+.impact-metrics{gap:18px;margin-top:26px}
+.impact-metrics article{min-height:154px;display:flex;flex-direction:column;justify-content:center;padding:28px 28px}
+.impact-metrics p{line-height:1.7}
+.impact-note{margin-top:20px;padding:20px 22px}
+
+/* Before / After */
+.workflow-compare{gap:22px}
+.workflow-column{box-shadow:var(--polish-shadow)}
+.workflow-column.after{box-shadow:0 18px 48px rgba(0,0,0,.16)}
+.workflow-column-head{min-height:144px;display:flex;flex-direction:column;justify-content:center}
+.workflow-list{padding-top:10px;padding-bottom:18px}
+.workflow-list li{min-height:112px;align-items:flex-start;padding:18px 8px}
+.workflow-list h4{line-height:1.45;margin-bottom:7px}
+.workflow-list p{line-height:1.8}
+.workflow-summary{gap:16px;margin-top:26px}
+.workflow-summary article{min-height:110px;align-items:flex-start;padding:23px 24px;box-shadow:0 8px 26px rgba(12,26,48,.035)}
+.workflow-summary h3{line-height:1.45;margin-bottom:6px}
+.workflow-summary p{line-height:1.75}
+
+/* Implementation */
+.implementation-grid{gap:16px;grid-auto-rows:1fr}
+.implementation-step{height:100%;min-height:228px;display:flex;flex-direction:column;padding:28px 25px 27px}
+.implementation-step h3{line-height:1.45;margin-top:18px;margin-bottom:9px}
+.implementation-step p{line-height:1.8}
+.implementation-message{margin-top:22px;padding:23px 28px}
+.implementation-message strong{line-height:1.45}
+.implementation-message p{line-height:1.7}
+
+/* Consultation */
+.consultation-layout{gap:62px}
+.consultation-heading>p:last-of-type{line-height:1.95}
+.consultation-message{padding:21px 23px}
+.consultation-message strong{line-height:1.6}
+.consultation-items{gap:16px;grid-auto-rows:1fr}
+.consultation-items article{height:100%;min-height:166px;align-items:flex-start;padding:25px 24px;box-shadow:var(--polish-shadow)}
+.consultation-items h3{line-height:1.45;margin-bottom:8px}
+.consultation-items p{line-height:1.8}
+.consultation-bottom{padding:25px 28px;box-shadow:var(--polish-shadow)}
+
+/* Self check */
+.selfcheck-grid{align-items:start}
+.selfcheck-card{padding:30px 30px 28px}
+.check-item{min-height:58px;padding:17px 0;line-height:1.7}
+.selfcheck-result{padding:21px 22px}
+.selfcheck-result p{line-height:1.75}
+
+/* FAQ */
+.faq-list details{overflow:hidden;border-radius:16px;box-shadow:0 6px 20px rgba(12,26,48,.025)}
+.faq-list summary{padding-top:21px;padding-bottom:21px;line-height:1.55}
+.faq-list p{line-height:1.85}
+
+/* Contact */
+.contact-lead{line-height:1.9}
+.contact-points{line-height:1.7}
+.contact-form{box-shadow:0 20px 56px rgba(0,0,0,.18)}
+.contact-form label{line-height:1.5}
+
+@media (min-width:981px){
+  .section-heading.center{max-width:920px}
+  #risk .section-heading.narrow{max-width:960px}
+  #cases .section-heading.narrow{max-width:900px}
+  .impact-heading,.workflow-heading,.implementation-heading{max-width:920px}
+  .consultation-heading h2{max-width:430px}
+  .selfcheck-section .section-heading{max-width:470px}
+}
+
+@media (max-width:980px){
+  .section{padding-top:82px;padding-bottom:82px}
+  .section-heading.center{margin-bottom:42px}
+  #solution .flow-card{min-height:0}
+  #cases .case-list{grid-template-columns:1fr 1fr}
+  .workflow-column-head{min-height:0}
+  .workflow-list li{min-height:0}
+  .implementation-step{min-height:190px}
+  .consultation-layout{gap:34px}
+}
+
+@media (max-width:760px){
+  .section{padding-top:62px;padding-bottom:62px}
+  .section-heading.center{margin-bottom:32px}
+  .section-heading>p:last-child{line-height:1.78}
+
+  .hero-copy{max-width:none}
+  .hero-mini-cards{gap:9px}
+  .mini-card{min-height:0;padding:16px 17px}
+
+  #risk .card{min-height:0;padding:20px}
+  #risk .quote-panel{padding:20px}
+
+  #ai .check-list{gap:10px}
+  #ai .check-list article{padding:20px;box-shadow:none}
+
+  #solution .flow{gap:10px}
+  #solution .flow-card{padding:20px;box-shadow:none}
+  #solution .feature-grid{gap:10px}
+  #solution .feature{min-height:0;padding:19px}
+
+  #cases .case-list{grid-template-columns:1fr;gap:9px;margin-top:28px}
+  #cases .case-list div{min-height:0;padding:16px 17px;border-radius:13px}
+  #cases .case-list span{width:28px;height:28px;border-radius:8px}
+
+  .impact-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .impact-table{min-width:620px}
+  .impact-table th,.impact-table td{padding:13px 11px}
+  .impact-metrics{gap:10px;margin-top:16px}
+  .impact-metrics article{min-height:0;padding:20px}
+  .impact-note{padding:15px 16px}
+
+  .workflow-compare{gap:12px}
+  .workflow-column{box-shadow:none}
+  .workflow-column-head{padding:21px 20px}
+  .workflow-list li{padding:15px 4px}
+  .workflow-summary{gap:9px;margin-top:17px}
+  .workflow-summary article{min-height:0;padding:17px 18px;box-shadow:none}
+
+  .implementation-grid{gap:9px}
+  .implementation-step{min-height:0;padding:20px}
+  .implementation-message{padding:18px 19px}
+
+  .consultation-layout{gap:28px}
+  .consultation-heading>p:last-of-type{line-height:1.82}
+  .consultation-items{gap:9px}
+  .consultation-items article{min-height:0;padding:18px 18px;box-shadow:none}
+  .consultation-bottom{padding:18px;box-shadow:none}
+
+  .selfcheck-card{padding:18px}
+  .check-item{min-height:0;padding:15px 0;line-height:1.65}
+  .selfcheck-result{padding:18px}
+
+  .faq-list details{border-radius:13px;box-shadow:none}
+  .faq-list summary{padding-top:18px;padding-bottom:18px}
+
+  .contact-form{box-shadow:none}
+}
