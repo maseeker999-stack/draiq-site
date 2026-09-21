@@ -1,3 +1,8 @@
+const v7Phase1Stylesheet=document.createElement('link');
+v7Phase1Stylesheet.rel='stylesheet';
+v7Phase1Stylesheet.href='/css/v7-phase1.css?v=20260921-1';
+document.head.appendChild(v7Phase1Stylesheet);
+
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     const id=a.getAttribute('href');
