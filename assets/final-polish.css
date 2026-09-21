@@ -1,0 +1,129 @@
+/* DRAIQ final visual polish — work branch only */
+
+/* Global rhythm */
+.section-heading{margin-bottom:44px}
+.section-heading.center{margin-bottom:48px}
+.section-heading h2{max-width:100%;text-wrap:balance}
+.section-heading>p:last-child{line-height:1.85}
+.card,.check-list article,.flow-card,.feature,.consultation-items article,.implementation-step{display:flex;flex-direction:column}
+.card p,.check-list article p,.flow-card p,.feature p,.consultation-items p,.implementation-step p{margin-top:auto}
+
+/* Risk cards */
+#risk .card-grid.three{align-items:stretch}
+#risk .card{min-height:178px}
+#risk .card h3{margin-bottom:9px}
+#risk .quote-panel{display:grid;gap:4px}
+
+/* AI cards */
+#ai .check-list article{justify-content:flex-start}
+#ai .check-list article p{margin-top:8px}
+#ai .check-list h3{margin-bottom:0}
+
+/* Solution */
+#solution .flow-card{min-height:150px}
+#solution .feature{align-items:flex-start;min-height:118px}
+#solution .feature>div{display:flex;flex-direction:column;min-height:100%}
+#solution .feature p{margin-top:5px}
+
+/* Impact: make before/after/effect instantly readable */
+.impact-table thead th:nth-child(2),
+.impact-table tbody td:nth-child(2){background:#fafbfc}
+.impact-table thead th:nth-child(3){background:#182436}
+.impact-table tbody td:nth-child(3){background:#fff8f2;color:#354254;font-weight:700}
+.impact-table thead th:nth-child(4){background:#ff7a1a;color:#111}
+.impact-table tbody td:nth-child(4){background:#fff3ea}
+.impact-table tbody tr:hover th,
+.impact-table tbody tr:hover td{filter:brightness(.985)}
+.impact-metrics article{display:flex;flex-direction:column;justify-content:center;min-height:168px}
+.impact-note{max-width:1000px;margin-left:auto;margin-right:auto}
+
+/* Before / after */
+.workflow-column{display:flex;flex-direction:column}
+.workflow-list{flex:1;display:grid;grid-template-rows:repeat(6,1fr)}
+.workflow-list li{align-items:start}
+.workflow-summary article{align-items:flex-start;min-height:112px}
+.workflow-summary article>div{display:flex;flex-direction:column;min-height:100%}
+.workflow-summary p{margin-top:auto}
+
+/* Implementation */
+.implementation-step{min-height:230px}
+.implementation-step p{margin-top:auto}
+.implementation-message{box-shadow:0 18px 42px rgba(0,0,0,.14)}
+
+/* Cases */
+#cases .case-list{border:1px solid #e6eaf0;border-radius:18px;overflow:hidden;background:#fff}
+#cases .case-list div{min-height:66px;background:#fff}
+#cases .case-list div:nth-child(odd){background:#fbfcfd}
+#cases .case-list div:last-child,#cases .case-list div:nth-last-child(2){border-bottom:none}
+
+/* Official block */
+.official-note{box-shadow:0 12px 36px rgba(12,26,48,.05)}
+
+/* Self check */
+.selfcheck-card{box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.check-item{transition:background .18s ease,border-color .18s ease;padding-left:6px;padding-right:6px;border-radius:10px}
+.check-item:hover{background:rgba(255,255,255,.025)}
+.check-item span{line-height:1.7}
+.selfcheck-result{margin-top:20px}
+
+/* Consultation */
+.consultation-items{align-items:stretch}
+.consultation-items article{min-height:176px}
+.consultation-items article>div{display:flex;flex-direction:column;min-height:100%}
+.consultation-items p{margin-top:auto}
+.consultation-message{box-shadow:0 16px 36px rgba(10,20,34,.12)}
+.consultation-bottom{box-shadow:0 12px 34px rgba(12,26,48,.05)}
+
+/* FAQ */
+.faq-list details{overflow:hidden;transition:border-color .18s ease,box-shadow .18s ease}
+.faq-list details[open]{border-color:#f0c6a5;box-shadow:0 10px 30px rgba(12,26,48,.05)}
+.faq-list summary{line-height:1.55}
+.faq-list p{line-height:1.8}
+
+/* Contact */
+.contact-form{box-shadow:0 24px 70px rgba(0,0,0,.18)}
+.contact-form label{letter-spacing:.01em}
+.contact-form input,.contact-form select,.contact-form textarea{background:#0a1422}
+.contact-points li{line-height:1.65}
+
+@media (min-width:981px){
+  .section{padding-top:92px;padding-bottom:92px}
+  #risk .card-grid.three{grid-auto-rows:1fr}
+  #ai .check-list article{padding:30px 28px}
+  .impact-table th,.impact-table td{padding-top:21px;padding-bottom:21px}
+  .workflow-column-head{min-height:135px}
+  .workflow-list li{min-height:105px}
+  .implementation-grid{align-items:stretch}
+  .consultation-layout{gap:64px}
+  .faq-list details{margin-bottom:12px}
+  .contact-form{padding:30px}
+}
+
+@media (min-width:761px) and (max-width:980px){
+  .section-heading{margin-bottom:38px}
+  .implementation-step{min-height:205px}
+  .consultation-items article{min-height:160px}
+}
+
+@media (max-width:760px){
+  .section-heading,.section-heading.center{margin-bottom:28px}
+  .section{padding-top:58px;padding-bottom:58px}
+  #risk .card{min-height:0}
+  #solution .flow-card,#solution .feature{min-height:0}
+  .impact-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .impact-table{min-width:620px}
+  .impact-table th,.impact-table td{white-space:normal}
+  .impact-metrics article{min-height:0}
+  .workflow-list{display:block}
+  .workflow-list li{min-height:0}
+  .workflow-summary article{min-height:0}
+  .implementation-step{min-height:0}
+  #cases .case-list{border-radius:14px}
+  #cases .case-list div{min-height:58px;padding:16px 14px}
+  #cases .case-list div:nth-last-child(2){border-bottom:1px solid #e1e5ea}
+  .consultation-items article{min-height:0}
+  .consultation-items p{margin-top:5px}
+  .faq-list details{margin-bottom:9px}
+  .faq-list summary{padding-top:18px;padding-bottom:18px}
+  .contact-form{box-shadow:none}
+}
