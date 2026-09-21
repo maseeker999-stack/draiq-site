@@ -3,6 +3,26 @@ v7Phase1Stylesheet.rel='stylesheet';
 v7Phase1Stylesheet.href='/css/v7-phase1.css?v=20260921-1';
 document.head.appendChild(v7Phase1Stylesheet);
 
+const v7Phase2Stylesheet=document.createElement('link');
+v7Phase2Stylesheet.rel='stylesheet';
+v7Phase2Stylesheet.href='/css/v7-phase2.css?v=20260921-1';
+document.head.appendChild(v7Phase2Stylesheet);
+
+const v7ImageSwaps=[
+  ['#risk .image-card img','/images/v7-risk.webp','図面と見積資料を確認する積算担当者'],
+  ['#ai .side-image img','/images/v7-ai.webp','BIM画面を見ながらAI導入を検討する建設担当者'],
+  ['.contact-person img','/images/v7-contact.webp','建設業の相談に対応する担当者']
+];
+v7ImageSwaps.forEach(([selector,src,alt])=>{
+  const img=document.querySelector(selector);
+  if(img){
+    img.src=src;
+    img.alt=alt;
+    img.removeAttribute('width');
+    img.removeAttribute('height');
+  }
+});
+
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     const id=a.getAttribute('href');
