@@ -1,0 +1,100 @@
+/* DRAIQ copy line-break polish
+   Visual-only typography pass. No copy changes. */
+
+.hero-copy .lead,
+.hero-note,
+.section-heading > p,
+.card p,
+.check-list article p,
+.flow-card p,
+.feature p,
+.quote-panel p,
+.quote-panel strong,
+.workflow-column-head p,
+.workflow-list p,
+.workflow-summary p,
+.workflow-note p,
+.implementation-step p,
+.implementation-message p,
+.consultation-heading > p,
+.consultation-items p,
+.consultation-message strong,
+.consultation-bottom strong,
+.selfcheck-copy p,
+.check-panel label,
+.result-box p,
+.faq-list p,
+.faq-list summary {
+  line-break: strict;
+  word-break: normal;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+.hero-copy h1,
+.section-heading h2,
+.card h3,
+.check-list article h3,
+.flow-card h3,
+.feature h3,
+.workflow-column-head h3,
+.workflow-list h4,
+.workflow-summary h3,
+.implementation-step h3,
+.consultation-items h3,
+.selfcheck-copy h2,
+.faq-list summary {
+  line-break: strict;
+  word-break: normal;
+  text-wrap: balance;
+}
+
+@media (min-width: 981px) {
+  .hero-copy .lead { max-width: 43rem; }
+  .section-heading > p { max-width: 46rem; }
+  .section-heading.center > p { margin-left: auto; margin-right: auto; }
+  .card p { max-width: 29rem; }
+  .check-list article p { max-width: 31rem; }
+  .flow-card p { max-width: 24rem; }
+  .feature p { max-width: 34rem; }
+  .workflow-list p,
+  .implementation-step p,
+  .consultation-items p { max-width: 32rem; }
+  .consultation-heading > p { max-width: 29rem; }
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  .hero-copy .lead,
+  .section-heading > p,
+  .card p,
+  .check-list article p,
+  .flow-card p,
+  .feature p,
+  .workflow-list p,
+  .implementation-step p,
+  .consultation-items p { max-width: none; }
+}
+
+@media (max-width: 760px) {
+  .hero-copy .lead,
+  .hero-note,
+  .section-heading > p,
+  .card p,
+  .check-list article p,
+  .flow-card p,
+  .feature p,
+  .workflow-list p,
+  .workflow-summary p,
+  .implementation-step p,
+  .implementation-message p,
+  .consultation-heading > p,
+  .consultation-items p,
+  .consultation-message strong,
+  .consultation-bottom strong,
+  .selfcheck-copy p,
+  .check-panel label,
+  .result-box p {
+    max-width: none;
+    text-wrap: pretty;
+  }
+}
