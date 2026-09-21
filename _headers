@@ -3,20 +3,10 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-
-/
-  Cache-Control: no-store, max-age=0
-  Clear-Site-Data: "cache"
-
-/*.html
-  Cache-Control: no-store, max-age=0, must-revalidate
-  Clear-Site-Data: "cache"
+  Cache-Control: no-cache, max-age=0, must-revalidate
 
 /images/*
-  Cache-Control: public, max-age=86400, must-revalidate
+  Cache-Control: public, max-age=86400
 
-/css/*
-  Cache-Control: public, max-age=0, must-revalidate
-
-/js/*
-  Cache-Control: public, max-age=0, must-revalidate
+/assets/*
+  Cache-Control: no-cache, max-age=0, must-revalidate

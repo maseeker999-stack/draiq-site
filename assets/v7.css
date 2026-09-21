@@ -1,0 +1,230 @@
+/* ===== V6 final polish ===== */
+:focus-visible{outline:3px solid rgba(255,122,26,.5);outline-offset:3px}
+section{scroll-margin-top:82px}
+.hero-copy{position:relative;z-index:2}
+.hero-visual:after{
+  content:"";position:absolute;inset:0;border-radius:26px;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+  pointer-events:none
+}
+.card,.check-list article,.flow-card,.feature,.official-note,.selfcheck-card{
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease
+}
+.card:hover,.check-list article:hover,.flow-card:hover,.feature:hover{
+  transform:translateY(-3px)
+}
+.official-section{padding:32px 0 0;background:#fff}
+.selfcheck-section{
+  background:
+  radial-gradient(circle at 10% 20%,rgba(255,122,26,.09),transparent 30%),
+  #0b1422;
+  color:#fff
+}
+.selfcheck-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:70px;align-items:start}
+.selfcheck-section .section-heading>p:last-child{color:#9aa8b8}
+.selfcheck-card{
+  padding:28px;border-radius:22px;background:#111d2f;
+  border:1px solid rgba(255,255,255,.09);
+  box-shadow:0 22px 60px rgba(0,0,0,.25)
+}
+.check-item{
+  display:grid;grid-template-columns:24px 1fr;gap:13px;align-items:flex-start;
+  padding:16px 0;border-bottom:1px solid rgba(255,255,255,.07);
+  cursor:pointer;color:#d7dee8;font-size:14px
+}
+.check-item:first-child{padding-top:0}
+.check-item input{
+  width:20px;height:20px;margin:2px 0 0;accent-color:var(--orange);cursor:pointer
+}
+.selfcheck-result{
+  margin-top:22px;padding:20px;border-radius:16px;background:#0a1422;
+  border:1px solid rgba(255,122,26,.22)
+}
+.selfcheck-result span{display:block;color:#8f9daf;font-size:11px;font-weight:800}
+.selfcheck-result strong{display:block;margin:3px 0 8px;font-size:30px;color:var(--orange)}
+.selfcheck-result p{margin:0;color:#bec8d4;font-size:13px}
+.selfcheck-cta{width:100%;margin-top:14px}
+.contact-form input,.contact-form select,.contact-form textarea{
+  transition:border-color .2s ease,box-shadow .2s ease
+}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{
+  box-shadow:0 0 0 3px rgba(255,122,26,.10)
+}
+.footer-inner{grid-template-columns:auto 1fr auto auto}
+.footer-links{justify-self:center}
+.footer p{margin:0}
+.mobile-sticky-cta{padding-bottom:env(safe-area-inset-bottom)}
+@media (max-width:980px){
+  .selfcheck-grid{grid-template-columns:1fr;gap:34px}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-links{justify-self:start}
+}
+@media (max-width:760px){
+  .hero h1{font-size:clamp(38px,11vw,48px)}
+  .hero h1 br{display:none}
+  .hero-note{line-height:1.7}
+  .floating-panel{margin-top:-42px}
+  .section-heading h2,.contact-section h2{font-size:clamp(32px,9.5vw,40px)}
+  .selfcheck-card{padding:20px}
+  .check-item{font-size:13px}
+  .official-section{padding-top:20px}
+  body{padding-bottom:74px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{transition:none!important;animation:none!important}
+}
+
+/* V7 FINAL LOCAL FIX — direct CSS, no JS-injected styles */
+@media (min-width:981px){
+  .section{padding:96px 0}
+  .hero{padding:88px 0 82px}
+  .hero-grid{gap:48px}
+  .hero h1{font-size:clamp(44px,5vw,66px);line-height:1.1;word-break:keep-all;overflow-wrap:normal}
+  .hero-visual>img{height:560px;object-fit:cover}
+
+  #risk .section-heading.narrow{max-width:1040px}
+  #risk .section-heading h2{font-size:clamp(40px,4.15vw,56px);line-height:1.16;letter-spacing:-.04em;word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
+  #risk .section-heading>p:last-child{max-width:760px;font-size:16px}
+  #risk .risk-layout{grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:28px;align-items:start;margin-top:42px}
+  #risk .card-grid.three{gap:14px}
+  #risk .card{padding:24px 26px}
+  #risk .card h3{margin:11px 0 7px;font-size:20px;line-height:1.42;word-break:keep-all;overflow-wrap:normal}
+  #risk .card p{font-size:13px;line-height:1.75}
+  #risk .image-card{height:540px;min-height:0;overflow:hidden;border-radius:22px}
+  #risk .image-card img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:center 40%;border-radius:22px}
+  #risk .quote-panel{margin-top:18px}
+
+  #ai{padding-top:96px;padding-bottom:96px}
+  #ai .split{grid-template-columns:minmax(320px,.82fr) minmax(0,1.18fr);gap:48px;align-items:start}
+  #ai .section-heading.sticky{position:static;max-width:none}
+  #ai .section-heading h2{font-size:clamp(38px,3.5vw,50px);line-height:1.12;letter-spacing:-.035em;word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
+  #ai .side-image{height:400px;margin-top:24px;overflow:hidden;border-radius:22px}
+  #ai .side-image img{width:100%;height:100%;object-fit:cover;object-position:center 35%;border-radius:22px}
+  #ai .check-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  #ai .check-list article{min-height:176px;padding:24px}
+  #ai .check-list h3{margin:10px 0 8px;font-size:20px;line-height:1.35;word-break:keep-all;overflow-wrap:normal}
+  #ai .check-list p{font-size:13px;line-height:1.7}
+
+  #solution .section-heading.center{margin-bottom:48px}
+  #solution .flow{margin-bottom:46px}
+  #cases .case-list{margin-top:40px}
+  .selfcheck-grid{gap:56px}
+  .faq-layout{gap:56px}
+
+  .contact-section{padding-top:92px;padding-bottom:76px}
+  .contact-grid{grid-template-columns:minmax(0,.92fr) minmax(460px,1.08fr);gap:56px;align-items:start}
+  .contact-section h2{font-size:clamp(38px,4vw,52px);line-height:1.14;word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
+  .contact-lead{max-width:470px;margin-top:20px;line-height:1.85}
+  .contact-points{margin-top:22px;gap:7px}
+  .contact-person{margin-top:24px;max-width:480px;height:300px;overflow:hidden;border-radius:20px}
+  .contact-person img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:center 35%;border-radius:20px;box-shadow:0 16px 50px rgba(0,0,0,.25)}
+  .contact-form{padding:24px 26px;border-radius:20px}
+  .contact-form label{margin-bottom:11px}
+  .contact-form input,.contact-form select,.contact-form textarea{margin-top:6px;padding:11px 13px}
+  .contact-form textarea{min-height:112px;resize:vertical}
+  .service-disclaimer{margin-top:22px;padding:16px 18px}
+  .service-disclaimer p{max-width:1000px}
+}
+
+@media (min-width:1180px){
+  .contact-grid{grid-template-columns:500px 1fr}
+}
+
+@media (max-width:980px){
+  #risk .section-heading h2,#ai .section-heading h2{text-wrap:balance}
+  #risk .image-card{height:420px;min-height:0;overflow:hidden;border-radius:22px}
+  #risk .image-card img,#ai .side-image img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:center;border-radius:22px}
+  #ai .side-image{height:420px;overflow:hidden;border-radius:22px}
+  #ai .check-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .contact-person{max-width:none;height:360px;overflow:hidden;border-radius:20px}
+  .contact-person img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:center 35%;border-radius:20px}
+}
+
+@media (max-width:760px){
+  html{scroll-padding-top:72px}
+  body{padding-bottom:82px}
+  .container{width:min(calc(100% - 30px),var(--max))}
+  .site-header{backdrop-filter:blur(14px)}
+  .header-inner{min-height:68px}
+  .brand-mark{width:36px;height:36px;font-size:19px}
+  .brand-copy strong{font-size:16px}
+  .brand-copy small{font-size:9px}
+  .menu-toggle{min-height:38px;padding:0 12px;font-size:12px}
+
+  .hero{padding:58px 0 52px}
+  .hero-grid{gap:30px}
+  .hero h1{font-size:clamp(36px,10.2vw,44px);line-height:1.14;letter-spacing:-.035em;word-break:normal;line-break:strict;text-wrap:balance}
+  .hero h1 br{display:block}
+  .lead{margin-top:22px;font-size:14px;line-height:1.85;word-break:normal;line-break:strict}
+  .hero-actions{margin-top:26px;gap:10px}
+  .btn{min-height:50px;padding:0 18px;border-radius:11px;font-size:14px}
+  .hero-note{margin-top:14px;font-size:11px;line-height:1.65}
+  .hero-mini-cards{margin-top:24px;gap:10px}
+  .mini-card{padding:15px 16px;border-radius:14px}
+  .mini-card p{font-size:11px;line-height:1.55}
+  .hero-visual>img{height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 35%;border-radius:20px}
+  .floating-panel{width:calc(100% - 16px);margin:-34px 8px 0;padding:16px;border-radius:18px}
+
+  .section{padding:64px 0}
+  .section-orange{padding:48px 0}
+  .section-heading.center{margin-bottom:36px}
+  .section-heading h2,.contact-section h2,.card h3,.check-list h3,.callout h2{word-break:normal;line-break:strict;overflow-wrap:normal;text-wrap:balance}
+  .section-heading h2,.contact-section h2{font-size:clamp(30px,8.4vw,36px);line-height:1.22;letter-spacing:-.025em}
+  .section-heading>p:last-child{margin-top:15px;font-size:14px;line-height:1.8}
+  .eyebrow{margin-bottom:12px;font-size:10px}
+
+  #risk .risk-layout{margin-top:30px;gap:18px}
+  #risk .card-grid.three{gap:12px}
+  #risk .card{padding:20px}
+  #risk .card h3{font-size:19px;line-height:1.48;margin:9px 0 7px}
+  #risk .card p{font-size:13px;line-height:1.72}
+  #risk .image-card{height:auto;aspect-ratio:4/3;border-radius:18px}
+  #risk .image-card img{object-position:center 38%;border-radius:18px}
+  #risk .quote-panel{margin-top:14px;padding:21px 20px;border-radius:15px}
+
+  #ai .split{gap:28px}
+  #ai .section-heading h2{font-size:clamp(30px,8.2vw,35px);line-height:1.2}
+  #ai .side-image{height:auto;aspect-ratio:4/3;margin-top:20px;border-radius:18px}
+  #ai .side-image img{object-position:center 34%;border-radius:18px}
+  #ai .check-list{grid-template-columns:1fr;gap:11px}
+  #ai .check-list article{min-height:0;padding:20px;border-radius:15px}
+  #ai .check-list h3{font-size:19px;line-height:1.42;margin:8px 0 6px}
+  #ai .check-list p{font-size:13px;line-height:1.7}
+
+  .flow{gap:11px;margin-bottom:34px}
+  .flow-card{padding:20px;border-radius:15px}
+  .feature-grid{gap:10px}
+  .feature{padding:19px;gap:14px}
+  .callout{gap:20px}
+  .callout h2{font-size:clamp(29px,8vw,34px);line-height:1.25}
+  .case-list{margin-top:28px;gap:0}
+  .official-note{padding:18px;border-radius:15px;gap:14px}
+  .selfcheck-grid{gap:26px}
+  .selfcheck-card{padding:18px;border-radius:17px}
+  .faq-layout{gap:26px}
+
+  .contact-section{padding-top:64px;padding-bottom:54px}
+  .contact-grid{gap:28px}
+  .contact-section h2{font-size:clamp(30px,8.3vw,35px);line-height:1.22}
+  .contact-lead{margin-top:16px;font-size:13px;line-height:1.8}
+  .contact-points{margin-top:20px;gap:7px;font-size:13px}
+  .contact-person{margin-top:22px;height:auto;aspect-ratio:4/3;border-radius:18px}
+  .contact-person img{object-position:center 34%;border-radius:18px}
+  .contact-form{padding:18px;border-radius:17px}
+  .contact-form label{margin-bottom:12px;font-size:12px}
+  .contact-form input,.contact-form select,.contact-form textarea{margin-top:6px;padding:12px;min-height:48px;font-size:16px;border-radius:9px}
+  .contact-form textarea{min-height:120px;line-height:1.6;resize:vertical}
+  .form-btn{min-height:52px;margin-top:3px}
+  .service-disclaimer{margin-top:18px;padding:15px 16px;border-radius:12px}
+
+  .footer{padding-top:28px;padding-bottom:100px}
+  .mobile-sticky-cta{left:12px;right:12px;bottom:max(10px,env(safe-area-inset-bottom));height:52px;border-radius:13px;font-size:14px;box-shadow:0 14px 36px rgba(0,0,0,.32)}
+}
+
+@media (max-width:380px){
+  .container{width:min(calc(100% - 24px),var(--max))}
+  .hero h1{font-size:34px}
+  .section-heading h2,.contact-section h2,#ai .section-heading h2{font-size:29px}
+  .floating-panel{padding:14px}
+}

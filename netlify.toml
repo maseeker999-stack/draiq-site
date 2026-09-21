@@ -3,10 +3,10 @@
 
 [[redirects]]
   from = "/thanks"
-  to = "/thanks.html"
+  to = "/thanks/"
   status = 301
 
 [[redirects]]
   from = "/privacy"
-  to = "/privacy.html"
+  to = "/privacy/"
   status = 301

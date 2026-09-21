@@ -9,12 +9,13 @@
   <meta property="og:title" content="DRAIQ導入相談｜積算、このままで大丈夫ですか">
   <meta property="og:description" content="AI積算を入れる前に、まず自社の積算体制を確認する。">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/images/ogp.webp">
+  <meta property="og:image" content="/assets/hero.webp">
   <meta property="og:locale" content="ja_JP">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Crect x='8' y='8' width='48' height='48' rx='12' fill='%23ff7a1a'/%3E%3Cpath d='M24 18h10c9 0 16 6 16 14s-7 14-16 14H24V18zm9 8h-1v12h1c5 0 9-2 9-6s-4-6-9-6z' fill='%23111'/%3E%3C/svg%3E">
-  <link rel="preload" as="image" href="/images/hero.webp" type="image/webp">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" as="image" href="/assets/hero.webp" type="image/webp">
   <meta name="format-detection" content="telephone=no">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/styles.css">
 
   <script type="application/ld+json">
   {
@@ -90,7 +91,7 @@
         </div>
 
         <div class="hero-visual">
-          <img src="images/hero.webp" alt="図面を見ながら積算や計画を確認する建設業の担当者" width="1536" height="1024" loading="eager" fetchpriority="high">
+          <img src="assets/hero.webp" alt="図面を見ながら積算や計画を確認する建設業の担当者" width="1536" height="1024" loading="eager" fetchpriority="high">
           <div class="floating-panel">
             <div class="panel-top">
               <span>ESTIMATION RISK CHECK</span>
@@ -147,7 +148,7 @@
           </div>
 
           <div class="image-card">
-            <img src="images/night-office.webp" alt="図面や資料を前に積算業務に悩む担当者" width="1536" height="1024" loading="lazy" decoding="async">
+            <img src="assets/risk.webp" alt="図面と見積資料を確認する積算担当者" width="1000" height="1250" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -165,7 +166,7 @@
           <h2>AI積算なら<br>何でも解決する。<br><span>それも危険です。</span></h2>
           <p>高額なシステムほど、導入前の確認が重要です。</p>
           <div class="side-image">
-            <img src="images/ai-team.webp" alt="建設AIの画面を見ながら検討するビジネス担当者たち" width="1536" height="1024" loading="lazy" decoding="async">
+            <img src="assets/ai.webp" alt="BIM画面を見ながらAI導入を検討する建設担当者" width="1000" height="1250" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -272,6 +273,7 @@
       </div>
     </section>
 
+
     <section class="official-section">
       <div class="official-note">
           <div>
@@ -281,6 +283,7 @@
           <a href="https://draiq.vercel.app/" target="_blank" rel="noopener noreferrer">DRAIQ公式情報を見る ↗</a>
       </div>
     </section>
+
 
     <section class="section selfcheck-section" id="selfcheck">
       <div class="container selfcheck-grid">
@@ -331,6 +334,7 @@
             <summary>どんな業種を想定していますか。</summary>
             <p>施工会社、内装、改修、専門工事など、見積・積算業務を抱える事業者を主な対象として想定しています。</p>
           </details>
+
           <details>
             <summary>DRAIQの公式サイトですか。</summary>
             <p>本サイトはDRAIQの導入相談・情報提供を目的とした独自運営ページです。製品の公式情報は、ページ内の「DRAIQ公式情報」リンクから確認できます。</p>
@@ -357,13 +361,15 @@
             <li>時間がかかっている工程</li>
           </ul>
           <div class="contact-person">
-            <img src="images/construction-team.webp" alt="相談しやすい雰囲気のビジネス担当者" width="1536" height="1024" loading="lazy" decoding="async">
+            <img src="assets/contact.webp" alt="建設業の相談に対応する担当者" width="1200" height="900" loading="lazy" decoding="async">
           </div>
         </div>
 
-        <form class="contact-form" name="draiq-contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+        <form class="contact-form" name="draiq-contact" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="draiq-contact">
-          <p class="hidden"><label>Do not fill this out if you're human: <input name="bot-field"></label></p>
+          <p class="hidden">
+            <label>Do not fill this out if you're human: <input name="bot-field"></label>
+          </p>
           <label>会社名<input type="text" name="company" autocomplete="organization" maxlength="120" required></label>
           <label>お名前<input type="text" name="name" autocomplete="name" maxlength="80" required></label>
           <label>メールアドレス<input type="email" name="email" autocomplete="email" maxlength="180" required></label>
@@ -381,6 +387,7 @@
           <button class="btn form-btn" type="submit">無料相談を送信する</button>
           <p class="form-note">送信後、内容を確認のうえご連絡します。</p>
         </form>
+
       </div>
       <div class="container">
         <div class="service-disclaimer">
@@ -397,12 +404,13 @@
         <span class="brand-mark">D</span>
         <span class="brand-copy"><strong>DRAIQ</strong><small>導入相談</small></span>
       </div>
-      <div class="footer-links"><a href="/privacy.html">プライバシーポリシー</a><a href="https://draiq.vercel.app/" target="_blank" rel="noopener noreferrer">DRAIQ公式情報 ↗</a></div>
+      <div class="footer-links"><a href="/privacy/">プライバシーポリシー</a><a href="https://draiq.vercel.app/" target="_blank" rel="noopener noreferrer">DRAIQ公式情報 ↗</a></div>
       <p>本サイトはDRAIQの導入相談・情報提供を目的とした独自運営ページです。</p>
       <p class="copyright">© 2026 DRAIQ Consultation.</p>
     </div>
   </footer>
-  <a class="mobile-sticky-cta" href="#contact">無料で相談する</a>
-  <script src="js/main.js"></script>
+<a class="mobile-sticky-cta" href="#contact">無料で相談する</a>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>
